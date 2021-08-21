@@ -21,6 +21,7 @@ function calculateTotalPrice(){
     subToalPriceField.innerText = totalPrice;
     totalPriceField.innerText = totalPrice;
 }
+// get 20% dicount using promocode
 function applyPromo(){
     const promocode = document.getElementById('promo-code').value;
     const prevTotalPrice = parseInt(document.getElementById('total-price').innerText); 
@@ -52,7 +53,7 @@ document.getElementById('memory-16gb').addEventListener('click',function(){
     getExtraPrice('extra-memory-cost',180);
 });
 
-// for storage price
+//for storage price
 document.getElementById('ssd-256gb').addEventListener('click',function(){
     getExtraPrice('extra-storage-cost',0);
 });
@@ -71,7 +72,7 @@ document.getElementById('delivery-cost-20').addEventListener('click',function(){
     getExtraPrice('delivery-charge',20);
 });
 
-// apply procode
+// apply promo code
 document.getElementById('apply-promo').addEventListener('click',function(){
     applyPromo();
 });
